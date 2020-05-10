@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import math
 import scipy.stats
-r = 1.75
+r = 1.52
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
 
@@ -77,8 +77,7 @@ for i in dw.keys():
 
 df = pd.DataFrame.from_dict(dw).T
 data = df.to_dict('records')
-data
-
-
-
+f = open("data.txt", "w")
+f.write(json.dumps(data))
+f.close()
 
